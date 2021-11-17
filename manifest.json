@@ -12,10 +12,7 @@
         "storage"
     ],
     "host_permissions":[
-        "https://www.app.artia.com/"
-    ],
-    "web_accessible_resources": [{
-        "resources": ["script.js"],
-        "matches": ["<all_urls>"]
-      }]
+        "https://www.app.artia.com/",
+        "https://www.solinftec.zendesk.com/"
+    ]
 }
