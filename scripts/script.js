@@ -1,12 +1,14 @@
 var btnArtiaPage = document.getElementById("btnArtiaPage");
 var btnTopDeskPage = document.getElementById("btnTopdeskPage");
 
+// All "pages" from index.html
 var artiaPage = document.getElementById("artia-page");
-var topdeskPage = document.getElementById("topdesk-page");
+var zendeskPage = document.getElementById("zendesk-page");
 var errorPage = document.getElementById("error-page");
+var loginZendeskPage = document.getElementById("login-zendesk-page");
 
-btnArtiaPage.addEventListener("click", openArtiaPage);
-btnTopDeskPage.addEventListener("click", openZendeskPage);
+//btnArtiaPage.addEventListener("click", openArtiaPage);
+//btnTopDeskPage.addEventListener("click", openZendeskPage);
 
 var inputEmail = document.getElementById("inputEmail");
 
@@ -24,7 +26,7 @@ window.onload = function(){
             {
                 url: "solinftec.zendesk.com",
                 name: "Zendesk"
-            },
+            }
         ]
 
         console.log(domain.hostname);
@@ -32,7 +34,7 @@ window.onload = function(){
 
         var pFilter = permissions.filter(obj => {
             return obj.url === domain.hostname;
-          })
+        })
 
         console.log(pFilter);
 
@@ -42,24 +44,41 @@ window.onload = function(){
             openErrorPage();
         }
 
-        inputEmail.setAttribute("value", domain.hostname);
     })
 }
 
-function openArtiaPage(){
-    artiaPage.style.display = "block";
-    topdeskPage.style.display = "none";
+function noneAllPage(){
+    artiaPage.style.display = "none";
+    zendeskPage.style.display = "none";
     errorPage.style.display = "none";
+    loginZendeskPage.style.display = "none";
+}
+
+function openArtiaPage(){
+    noneAllPage();
+    artiaPage.style.display = "block";
 }
 
 function openZendeskPage(){
-    artiaPage.style.display = "none";
-    topdeskPage.style.display = "block";
-    errorPage.style.display = "none";
+    // if(getTokenZedesk() === ""){
+    //     openLoginZendesk();
+    // }else{
+        noneAllPage();
+        zendeskPage.style.display = "block";
+    //}    
 }
 
 function openErrorPage(){
+    noneAllPage();
     errorPage.style.display = "block";
-    artiaPage.style.display = "none";
-    topdeskPage.style.display = "none";
+}
+
+function getTokenZedesk(){
+    var token = "";
+    return token;
+}
+
+function openLoginZendesk(){
+    noneAllPage();
+    loginZendeskPage.style.display = "block";
 }

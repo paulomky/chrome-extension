@@ -1,32 +1,117 @@
-body {
+body{
     width: 750px;
     overflow-x: hidden !important;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Red Hat Display', sans-serif !important;
 }
 
-h1 {
+h1{
     font-weight: bolder !important;
     padding: 0px 60px;
 }
 
-i {
+i{
     color: #FCA311;
 }
 
-#navbar {
+#navbar{
     background-color: #242423;
-    padding: 7px 0px;
+    padding: 7px 0px; 
     box-shadow: 2px 5px 3px grey;
 
     font-size: large;
     justify-content: center;
-    text-align: center;
+    text-align: center;    
 }
 
-.btn-link {
+
+.btn-link{
     color: #FCA311 !important;
 }
 
-.content {
+.content{
     padding: 40px 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.form-group{
+    margin-bottom: 20px !important;
+    text-align: left !important;
+}
+
+.btn-favs{
+    background-color: #FCA311 !important;
+    font-weight: bolder;
+    width: 100%;
+}
+
+#category-container{
+    margin-top: 30px;
+}
+
+.category-header{
+    background-color: #242423;
+    /*width: 200px !important;*/
+    border: 1px solid #242423;
+    border-radius: 20px 20px 0px 0px;
+
+    padding: 7px 20px;
+
+    justify-content: left;
+    text-align: left;
+}
+
+.category-body{
+    /*width: 200px !important;*/
+    padding: 12px 20px;    
+    margin-bottom: 15px;
+
+    border: 1px solid #242423;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 1px 3px 3px rgb(180, 180, 180);
+
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: left;    
+}
+
+
+#links-container{
+    margin-top: 30px;
+}
+
+.link-header{
+    background-color: #242423;
+    border: 1px solid #242423;
+    border-radius: 20px  0px  0px 20px;    
+    box-shadow: 1px 3px 3px rgb(180, 180, 180);
+    
+    width: 60px !important;
+    margin-bottom: 15px;
+}
+
+.link-body{
+    border: 1px solid #242423;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 1px 3px 3px rgb(180, 180, 180);
+    padding: 10px 0px 10px 30px !important;
+    margin-bottom: 15px;
+}
+
+.link-title{
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.btn-nopadding{
+    padding: 0px !important;
+}
+
+
+.sm-img{
+    width: 32px !important;
+    height: 32px !important;
+    margin: auto;
 }
