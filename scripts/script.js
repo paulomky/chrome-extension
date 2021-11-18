@@ -29,14 +29,9 @@ window.onload = function(){
             }
         ]
 
-        console.log(domain.hostname);
-        console.log(permissions);
-
         var pFilter = permissions.filter(obj => {
             return obj.url === domain.hostname;
         })
-
-        console.log(pFilter);
 
         if(pFilter.length > 0){
             window["open"+pFilter[0].name+"Page"]();
@@ -60,12 +55,12 @@ function openArtiaPage(){
 }
 
 function openZendeskPage(){
-    // if(getTokenZedesk() === ""){
-    //     openLoginZendesk();
-    // }else{
+     if(getTokenZedesk() === ""){
+         openLoginZendesk();
+     }else{
         noneAllPage();
         zendeskPage.style.display = "block";
-    //}    
+    }    
 }
 
 function openErrorPage(){
