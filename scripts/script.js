@@ -1,3 +1,5 @@
+
+
 var btnArtiaPage = document.getElementById("btnArtiaPage");
 var btnTopDeskPage = document.getElementById("btnTopdeskPage");
 
@@ -64,11 +66,12 @@ function openZendeskPage(){
 }
 
 function openErrorPage(){
+    artiagetToken();
     noneAllPage();
     errorPage.style.display = "block";
 }
 
-function getTokenZedesk(){
+function getTokenZendesk(){
     var token = "";
     return token;
 }
