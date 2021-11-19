@@ -10,7 +10,7 @@ h1{
 }
 
 i{
-    color: #FCA311;
+    color: #246BAB;
 }
 
 #navbar{
@@ -25,7 +25,7 @@ i{
 
 
 .btn-link{
-    color: #FCA311 !important;
+    color: #246BAB !important;
 }
 
 .content{
@@ -41,7 +41,7 @@ i{
 }
 
 .btn-favs{
-    background-color: #FCA311 !important;
+    background-color: #246BAB !important;
     font-weight: bolder;
     width: 100%;
 }
@@ -114,4 +114,16 @@ i{
     width: 32px !important;
     height: 32px !important;
     margin: auto;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.fixed-bottoms{
+    position:fixed;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1030;
 }

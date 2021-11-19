@@ -18,7 +18,6 @@
     </head>
     <body>
 
-
         <div id="navbar" class="row justify-content-center">
             <div class="col-2">
                 <img src="assets/icon.png" width="30">
@@ -44,6 +43,40 @@
 
         <div id="artia-page" class="content" style="display: none">
             <h1>Página do <i>Artia</i></h1>
+            <form>
+                <div class="form-group">
+                    <label for="form-title" class="sr-only">Título da Tarefa</label>
+                    <input id="ticket-title" class="form-control" placeholder="Título" value="WO not coming into integration">
+                </div>
+                <div class="row form-group">                    
+                    <div class="col-3">
+                        <label for="form-title" class="sr-only">ID do chamado</label>
+                        <input id="ticket-title" class="form-control" placeholder="ID Chamado" value="4632">
+                    </div>
+                    <div class="col-3">
+                        <label for="form-title" class="sr-only">Tipo do chamado</label>
+                        <select class="form-control" id="cidades">
+                            <!-- <option value="0"></option> -->
+                            <option value="1">Issue</option>
+                            <option value="2">Change Request</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="form-title" class="sr-only">Status da tarefa</label>
+                        <select class="form-control" id="cidades">
+                            <!-- <option value="0"></option> -->
+                            <option value="1">New</option>
+                            <option value="2">Open</option>
+                            <option value="3">Pending</option>
+                            <option value="4">On-hold</option>
+                            <option value="5">Solved</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="fixed-bottoms">
+                <button class="btn btn-primary btn-favs">Atualizar Status</button>
+            </div>
         </div>
 
         <div id="zendesk-page" class="content" style="display: none">
@@ -51,11 +84,25 @@
             <form>
                 <div class="form-group">
                     <label for="form-title" class="sr-only">Título do Chamado</label>
-                    <input id="form-title" class="form-control" placeholder="Título">
+                    <input id="ticket-title" class="form-control" placeholder="Título">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentários</label>                    
+                    <div class="col">
+                        <!-- Mockar esta div para replicar para cada comentário presente no chamado-->
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Andrew Smith &#13;&#10; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, et vel magnam nobis repudiandae suscipit quo dicta ratione quos voluptatem at veniam voluptatum explicabo amet nihil distinctio. Obcaecati, ea nam.</textarea>                             
+                        </div>     
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Taylor Wetli &#13;&#10; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, et vel magnam nobis repudiandae suscipit quo dicta ratione quos voluptatem at veniam voluptatum explicabo amet nihil distinctio. Obcaecati, ea nam.</textarea>                             
+                        </div>
+                    </div>
                 </div>
             </form>
-    
-            <button id="form-sub-button" class="btn btn-primary btn-favs">Salvar!</button>
+            <div class="fixed-bottoms">
+                <button id="btn-create-task" class="btn btn-primary btn-favs">Criar Tarefa!</button>
+            </div>
         </div>
 
         <div id="login-zendesk-page" class="content" style="display: none">
@@ -63,15 +110,16 @@
             <form>
                 <div class="form-group">
                     <label for="form-title" class="sr-only">Email*</label>
-                    <input type="email" id="form-title" class="form-control" placeholder="Email">
+                    <input required type="email" id="email-zendesk" class="form-control" placeholder="Email">
                 </div>
+
                 <div class="form-group">
                     <label for="form-title" class="sr-only">Senha*</label>
-                    <input type="password" id="form-title" class="form-control" placeholder="Senha">
+                    <input required type="password" id="password-zendesk" class="form-control" placeholder="Senha">
                 </div>
             </form>
     
-            <button id="form-sub-button" class="btn btn-primary btn-favs">Salvar!</button>
+            <button id="submit-zendesk" class="btn btn-primary btn-favs">Salvar!</button>
         </div>
 
         <div id="error-page" class="content" style="display: none">
@@ -81,5 +129,6 @@
         <script src="scripts/script.js"></script>
         <script src="scripts/Authorization/artiaAuth.js"></script>
         <script src="scripts/bootstrap.js"></script>
+        
     </body>
 </html>

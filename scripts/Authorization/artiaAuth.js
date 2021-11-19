@@ -6,6 +6,7 @@ var graphql = JSON.stringify({
   query: "mutation{\n    authenticationByEmail(email:\"penedoleite@gmail.com\", password: \"DPLFrancisFN2187!\") {\n        token\n  }\n}",
   variables: {}
 })
+
 var requestOptions = {
   method: 'POST',
   headers: myHeaders,
